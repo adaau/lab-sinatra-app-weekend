@@ -1,0 +1,31 @@
+<h2>Edit Book</h2>
+
+<form class="form book" id="edit_book" action="/books/<%= @book.id %>/update" method="POST">
+  <div class="form-group">
+    <label for="book_title">Title:</label>
+    <input class="form-control" type="text" name="book[title]" id="book_title_edit" value="<%= @book.title %>">
+  </div>
+
+  <div class="form-group">
+    <label for="book_author">Author:</label>
+    <input class="form-control" type="text" name="book[author]" id="book_author_edit" value="<%= @book.author %>">
+  </div>
+
+  <div class="form-group">
+    <label for="book_isbn">ISBN:</label>
+    <input class="form-control" type="text" name="book[isbn]" id="book_isbn_edit" value="<%= @book.isbn %>">
+  </div>
+
+  <div class="form-group">
+    <label for="book_year">Year Published:</label>
+    <input class="form-control" type="text" name="book[year]" id="book_year_edit" value="<%= @book.year %>">
+  </div>
+
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" name="book[is_in]">Is In
+    </label>
+  </div>
+
+  <button class="btn btn-primary" type="submit">Edit Book</button>
+</form>

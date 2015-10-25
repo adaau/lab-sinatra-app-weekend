@@ -1,0 +1,25 @@
+<h2>Books</h2>
+
+<a class="btn" href="/books/new">Add Book</a>
+
+<div class="books">
+  <% @books.each do |book| %>
+    <div class="row"></div>
+      <ul>
+        <li>
+          <span><strong><a href="/books/<%= book.id %>"><%= book.title %></a></strong> <%= book.author %> <%= book.is_in %></span>
+
+          <a href="/books/<%= book.id %>/edit">
+            Edit
+          </a>
+
+
+          <form method="POST" action="/books/<%= book.id %>/delete">
+            <input type="submit" value="Delete Book">
+          </form>
+
+        </li>
+      </ul>
+    </div>
+  <% end %>
+</div>
